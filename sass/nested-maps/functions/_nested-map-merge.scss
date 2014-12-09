@@ -11,7 +11,7 @@
         $aux-map: nested-map-merge($map-value, $overlay-map-value);
       }
       @else {
-        $aux-map: $map-value;
+        $aux-map: $overlay-map-value;
       }
     }
     @else {
