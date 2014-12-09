@@ -1,0 +1,26 @@
+{
+  "name": "nested-maps",
+  "version": "0.0.1",
+  "homepage": "http://hello.iruka.fi",
+  "authors": [
+    "Ilkka Hakkarainen <ilkka.hakkarainen@cs.helsinki.fi>"
+  ],
+  "description": "Utility functions to manage nested sass maps with ease.",
+  "main": "sass/_palette.scss",
+  "keywords": [
+    "sass",
+    "css",
+    "maps"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sassy-maps": "~0.4.0"
+  }
+}

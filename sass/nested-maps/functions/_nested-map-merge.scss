@@ -1,0 +1,25 @@
+@function nested-map-merge($map, $overlay-map) {
+  $merged: ();
+
+  @each $map-key, $map-value in $overlay-map {
+    $overlay-map-value: map-get($overlay-map, $map-key);
+    $map-value: map-get($map, $map-key);
+    $aux-map: ();
+
+    @if $map-value != null {
+      @if type-of($map-value) == map {
+        $aux-map: nested-map-merge($map-value, $overlay-map-value);
+      }
+      @else {
+        $aux-map: $map-value;
+      }
+    }
+    @else {
+      $aux-map: $overlay-map-value;
+    }
+
+    $merged: map-set($merged, $map-key, $aux-map);
+  }
+
+  @return map-merge($map, $merged);
+}
