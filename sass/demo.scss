@@ -26,3 +26,4 @@ hello: (
 @debug $nested-map;
 @debug $another-nested-map;
 @debug nested-map-merge($nested-map, $another-nested-map);
+@debug nested-map-set($nested-map, hello f set, 'item set');
